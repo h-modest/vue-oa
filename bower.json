@@ -1,0 +1,21 @@
+{
+  "name": "vue-demo",
+  "description": "A Vue.js project",
+  "main": "",
+  "authors": [
+    "h-moodest <h-modest@hotmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/h-modest/vue-demo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "static/tool"
+  ],
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}
