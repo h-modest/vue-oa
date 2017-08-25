@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import App from '@/App'
+import Oa from '@/components/oa/routers/Oa'
+import Account from './account/account'
 
 Vue.use(Router)
 
@@ -10,7 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: App
+      component: Oa
     },
+    Account
   ]
 })

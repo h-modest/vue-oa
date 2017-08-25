@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import _ from 'underscore';
+import _ from 'lodash';
 import { timestamp, log } from './utils';
 import qs from 'qs';
 import Map from 'es6-map';

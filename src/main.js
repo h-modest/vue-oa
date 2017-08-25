@@ -7,6 +7,13 @@ import createHistory from 'history/createBrowserHistory'
 import config from './config'
 import APIHandler from './lib/api'
 import store from './store'
+import Vuerify from 'vuerify'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
+import './less/account.less'
+
+Vue.use(iView)
+Vue.use(Vuerify)
 
 global.browserHistory = createHistory()
 global.API = new APIHandler(config)
