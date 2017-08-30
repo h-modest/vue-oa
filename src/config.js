@@ -1,4 +1,4 @@
 export default {
-  api_url: 'http://www.hxq.com/',
-  client_url: 'http://www.hxq.test.com/',
+  api_url: 'http://api.oa.hxq.local/',
+  client_url: 'http://www.oa.hxq.local/',
 };

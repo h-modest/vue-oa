@@ -14,13 +14,14 @@
             <Input v-model="form.verify_code" placeholder="验证码" />
           </Col>
           <Col span="12">
-            <img :src="form.verify_img" style="height:33px; margin-left: 10px;" />
+            <img :src="captcha" class="captcha" @click="refresh()" />
           </Col>
         </Row>
       </Form-item>
       <Form-item>
         <Button type="primary" class="account-btn">登录</Button>
         <Button type="ghost" class="account-btn account-gap">注册</Button>
+        <router-link to="/account/forget" class="forget-password">忘记秘密？</router-link>
       </Form-item>
     </Form>
   </div>
@@ -28,7 +29,7 @@
 
 <script>
 
-import VerifyImg from '@/assets/img/verify_code.png'
+import config from '@/config'
 
 export default {
   name: 'login',
@@ -38,8 +39,20 @@ export default {
         account: '',
         password: '',
         verify_code: '',
-        verify_img: VerifyImg,
-      }
+      },
+      captcha: config.api_url + 'api/captcha',
+    }
+  },
+  watch: {
+    captcha(newValue) {
+      console.log(newValue);
+    }
+  },
+  methods: {
+    refresh() {
+      let url = this.captcha.split('?')[0];
+      let rand = Date.parse(new Date()) + Math.floor(Math.random()*100 + 1);
+      this.captcha = url + '?id=' + Date.parse(new Date()) + rand;
     }
   }
 }

@@ -5,7 +5,7 @@ const state = {
 }
 
 const getters = {
-  access_token: state => state.access_token
+  access_token: state => state.access_token,
 }
 
 const login = {

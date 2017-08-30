@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import _ from 'lodash';
+import _ from 'underscore';
 import { timestamp, log } from './utils';
 import qs from 'qs';
 import Map from 'es6-map';
@@ -153,8 +153,8 @@ export default class APIHandler {
       }
     }
     // compose full URL: http://127.0.0.1:3000/api/route/path
-    // let fullUrl = this.url + 'api' + url;
-    let fullUrl = this.url + url;
+    let fullUrl = this.url + 'api' + url;
+    // let fullUrl = this.url + url;
     let promise = new Promise((resolve, reject) => {
       function makeRequest() {
         let res = undefined;
