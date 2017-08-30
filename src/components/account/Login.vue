@@ -19,8 +19,8 @@
         </Row>
       </Form-item>
       <Form-item>
-        <Button type="primary">登录</Button>
-        <Button type="ghost" style="margin-left: 8px">注册</Button>
+        <Button type="primary" class="account-btn">登录</Button>
+        <Button type="ghost" class="account-btn account-gap">注册</Button>
       </Form-item>
     </Form>
   </div>

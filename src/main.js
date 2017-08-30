@@ -11,6 +11,7 @@ import Vuerify from 'vuerify'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 import './less/account.less'
+import './less/iview.less'
 
 Vue.use(iView)
 Vue.use(Vuerify)
