@@ -124,8 +124,11 @@ export default class APIHandler {
     let params = _.extend({
       headers: {
         'Accept': 'application/json',
-      }
+      },
+      credentials: 'include'
     }, _.omit(options, 'cache'));
+
+    params.withCredentials = true;
 
     if (options.method == 'get') {
       if (_.isObject(data) && !_.isEmpty(data)) {
@@ -143,10 +146,11 @@ export default class APIHandler {
       }
     }
     let _fetch = fetch;
+    // console.log(params);
     if (_.contains(['post','put','delete'], options.method) && data) {
       if (data instanceof FormData) {
         params.body = data;
-        // _fetch = XHR.fetch.bind(XHR);
+        _fetch = XHR.fetch.bind(XHR);
       } else {
         params.headers['Content-Type'] = 'application/json';
         params.body = JSON.stringify(data);

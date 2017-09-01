@@ -1,10 +1,12 @@
 const mutations = {
-  getCaptcha(state) {
-  },
+  //分发状态
 }
 
 const actions =  {
-  getCaptcha: ({ commit }) => commit('getCaptcha'),
+  //异步操作
+  // loginRemote({ dispatch }, data) {
+  //   return API.post('/account/login', data);
+  // }
 }
 
 export {

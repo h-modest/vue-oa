@@ -11,6 +11,7 @@ class XHR {
 
     // 发送请求
     xhr.open(params.method.toLowerCase(), url, true);
+    xhr.withCredentials = true;
 
     // set Headers
     let header = params.headers || params.header;
@@ -34,7 +35,6 @@ class XHR {
 
     // 发送数据
     params.body && xhr.send(params.body);
-
     // 解析数据
     xhr.json = function() {
       let that = this;
